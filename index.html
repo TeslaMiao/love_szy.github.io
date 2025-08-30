@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>七夕 · 心跳爱心</title>
+  <title>浪漫 · 心动</title>
   <style>
     html, body {
       height: 100%;
@@ -412,25 +412,25 @@
     pool.draw(ctx, heartImage);
 
     // overlay texts
-    // Top: 七夕快乐
+    // Top: 顶层标题
     const grad = ctx.createLinearGradient(centerX-100, 0, centerX+100, 0);
     grad.addColorStop(0, '#ffd1e6');
     grad.addColorStop(1, '#ff6aa2');
-    drawCenteredText('七夕快乐', height * 0.13,
+    drawCenteredText('星河烂漫 · 满眼是你', height * 0.13,
       "700 56px 'STKaiti','KaiTi','Hiragino Sans GB','Microsoft YaHei','Noto Serif SC',serif",
       grad, 28, 'rgba(255,140,180,0.95)'
     );
 
     // Bottom center: 我们已经在一起第 xxx 天啦
     const days = togetherDays();
-    const bottomMsg = `我们已经在一起第 ${days} 天啦`;
+    const bottomMsg = `我们已经在一起 ${days} 天啦`;
     drawCenteredText(bottomMsg, height * 0.84,
       "600 26px 'STKaiti','KaiTi','Microsoft YaHei','Noto Serif SC',serif",
       '#ffd9e8', 12, 'rgba(255,128,170,0.8)'
     );
 
     // Bottom-most romantic line (wrapped)
-    const poem = '从遇见你的那天起，星河有迹、爱意有凭。愿以后每一天，我都更爱你。';
+    const poem = '但你在我这里是晴天。';
     ctx.shadowBlur = 0;
     drawWrappedText(poem, height - 32, Math.min(width*0.86, 980),
       28, "500 20px 'STKaiti','KaiTi','Microsoft YaHei','Noto Serif SC',serif",
